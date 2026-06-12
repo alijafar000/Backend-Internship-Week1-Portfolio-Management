@@ -37,26 +37,20 @@ A RESTful Backend API for managing user portfolios and projects. This applicatio
 portfolio-backend/
 │
 ├── src/
-│   ├── config/
-│   │   └── db.js
-│   │
 │   ├── controllers/
-│   │   ├── authController.js
-│   │   └── projectController.js
+│   │   ├── user.js
+│   │   └── project.js
 │   │
 │   ├── middleware/
-│   │   └── authMiddleware.js
+│   │   └── Auth.js
 │   │
 │   ├── models/
 │   │   ├── User.js
 │   │   └── Project.js
 │   │
 │   ├── routes/
-│   │   ├── authRoutes.js
-│   │   └── projectRoutes.js
-│   │
-│   └── utils/
-│       └── generateToken.js
+│   │   ├── user.js
+│   │   └── project.js
 │
 ├── .env
 ├── package.json
@@ -112,7 +106,7 @@ npm start
 #### Register User
 
 ```http
-POST /api/auth/register
+POST /api/user/register
 ```
 
 Request Body:
@@ -128,7 +122,7 @@ Request Body:
 #### Login User
 
 ```http
-POST /api/auth/login
+POST /api/user/login
 ```
 
 Request Body:
@@ -149,13 +143,13 @@ All project routes require JWT Token.
 #### Create Project
 
 ```http
-POST /api/projects
+POST /api/projects/new
 ```
 
 #### Get All Projects
 
 ```http
-GET /api/projects
+GET /api/projects/
 ```
 
 #### Get Single Project
@@ -212,6 +206,6 @@ Authorization: Bearer <your_jwt_token>
 
 ## Author
 
-Jafar
+Jafar Ali
 
 Backend Developer Intern
