@@ -65,7 +65,7 @@ portfolio-backend/
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/alijafar000/Backend-Internship-Week1-Portfolio-Management.git
 cd portfolio-backend
 ```
 
